@@ -6,8 +6,14 @@ var starTotal = 100;
 var planetXPos = [];
 var planetYPos = [];
 var planet = "🪐";
-var planetTotal = 3;
+var planetTotal = 2;
 var planetFound = 0;
+
+var rocketXPos = [];
+var rocketYPos = [];
+var rocket = "🚀";
+var rocketTotal = 2;
+var rocketFound = 0;
 
 setup = function() {
    size(600, 450); 
@@ -42,7 +48,7 @@ var check = function(xClick, yClick){
 }
 
 var display = function(){
-  background(100,100,100);
+  background(21, 0, 51);
 
   fill(200,200,0);
   textSize(20);
@@ -50,6 +56,8 @@ var display = function(){
   for(var i = 0; i < planetXPos.length; i ++){
     text(planet, planetXPos[i], planetYPos[i]);
   }
+
+  while
 
   for(var i = 0; i < starXPos.length; i ++){
     text(star, starXPos[i], starYPos[i]);
