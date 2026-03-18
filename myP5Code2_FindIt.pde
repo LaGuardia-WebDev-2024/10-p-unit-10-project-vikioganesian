@@ -47,6 +47,19 @@ var check = function(xClick, yClick){
   }
 }
 
+
+
+var check = function(xClick, yClick){
+  for(var i = 0; i < rocketXPos.length; i++){
+    if(dist(xClick - 5, yClick - 5, rocketXPos[i], rocketYPos[i])<15){
+     rocketXPos.splice(i, 1);
+      rocketYPos.splice(i, 1);
+      rocketFound++;
+    }
+  }
+}
+
+
 var display = function(){
   background(21, 0, 51);
 
@@ -57,7 +70,11 @@ var display = function(){
     text(planet, planetXPos[i], planetYPos[i]);
   }
 
-  while
+  var i = 0;
+  while (i < rocketXPos.length) {
+    text(rocket, rocketXPos[i], rocketYPos[i]);
+    i ++;
+  }
 
   for(var i = 0; i < starXPos.length; i ++){
     text(star, starXPos[i], starYPos[i]);
@@ -68,11 +85,17 @@ var display = function(){
   fill(255,255,255);
   text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 0, 425);
 
-  if(planetFound == planetTotal){
+  if(planetFound == planetTotal & rocketFound == rocketTotal){
     fill(0, 200, 200);
     textSize(50);
     text("Press 'r' to restart \nthe game", 50, 200);
-  }
+
+ }
+ 
+
+
+ 
+
 }
 
 var reset = function(){
@@ -91,5 +114,10 @@ var reset = function(){
   for(var i = 0; i < planetTotal; i++){
     planetXPos.push(random(0,600));
     planetYPos.push(random(0,400));
+  }
+
+    for(var i = 0; i < rocketTotal; i++){
+    rocketXPos.push(random(0,600));
+    rocketYPos.push(random(0,400));
   }
 }
