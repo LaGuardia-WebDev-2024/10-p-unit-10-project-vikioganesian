@@ -6,7 +6,7 @@ var starTotal = 100;
 var planetXPos = [];
 var planetYPos = [];
 var planet = "🪐";
-var planetTotal = 2;
+var planetTotal = 3;
 var planetFound = 0;
 
 var rocketXPos = [];
@@ -14,6 +14,9 @@ var rocketYPos = [];
 var rocket = "🚀";
 var rocketTotal = 2;
 var rocketFound = 0;
+
+var lll = ["🌟","🛸"];
+lllTotal = 9;
 
 setup = function() {
    size(600, 450); 
@@ -35,6 +38,7 @@ draw = function(){
 
 mouseClicked = function(){
   check(mouseX, mouseY);
+  check2(mouseX,mouseY);
 }
 
 var check = function(xClick, yClick){
@@ -49,7 +53,7 @@ var check = function(xClick, yClick){
 
 
 
-var check = function(xClick, yClick){
+var check2 = function(xClick, yClick){
   for(var i = 0; i < rocketXPos.length; i++){
     if(dist(xClick - 5, yClick - 5, rocketXPos[i], rocketYPos[i])<15){
      rocketXPos.splice(i, 1);
@@ -83,7 +87,7 @@ var display = function(){
   fill(0,0,0);
   rect(0,400,600,50);
   fill(255,255,255);
-  text("Find The " + planet + "s   |   " + planet + " " + planetFound + "/" + planetTotal, 0, 425);
+  text("Find The " + planet + "s and "+rocket+"s |   " + planet + " " + planetFound + "/" + planetTotal + rocket + rocketFound + "/" + 2 , 0, 425);
 
   if(planetFound == planetTotal & rocketFound == rocketTotal){
     fill(0, 200, 200);
@@ -104,12 +108,18 @@ var reset = function(){
   planetXPos = [];
   planetYPos = [];
   planetFound = 0;
+  rocketXPos = [];
+  rocketYPos = [];
+  rocketFound = 0;
 
 
   for(var i = 0; i < starTotal; i++){
     starXPos.push(random(0,600));
     starYPos.push(random(0,400));
   }
+
+ for(var i = 0; i < lllTotal; i++)
+
 
   for(var i = 0; i < planetTotal; i++){
     planetXPos.push(random(0,600));
