@@ -118,7 +118,7 @@ var reset = function(){
     starYPos.push(random(0,400));
   }
 
- for(var i = 0; i < lllTotal; i++)
+ 
 
 
   for(var i = 0; i < planetTotal; i++){
