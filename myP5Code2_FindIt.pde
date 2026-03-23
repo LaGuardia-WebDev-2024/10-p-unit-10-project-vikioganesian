@@ -16,7 +16,14 @@ var rocketTotal = 2;
 var rocketFound = 0;
 
 var lll = ["🌟","🛸"];
-lllTotal = 9;
+
+let x = random(0,300);
+let y = random(0,300);
+
+
+
+
+
 
 setup = function() {
    size(600, 450); 
@@ -24,7 +31,10 @@ setup = function() {
    reset();
 }
 
-draw = function(){   
+draw = function(){ 
+
+text(lll[0],x,y);
+text(lll[1],x,y);
 
    if(keyPressed){
     if(key == 'r'){
