@@ -1,6 +1,6 @@
 body {
-  background-image: url("Sprinkles.jpg");
-  background-color: hsl(213, 85%, 92%);
+  background-image: url("https://www.nhm.ac.uk/content/dam/nhm-www/discover/what-is-space/what-is-space-milky-way-full-width.jpg.thumb.1160.1160.png");
+  
   background-blend-mode: overlay;
   text-align: center;
   background-size: cover;
@@ -16,7 +16,7 @@ html{
 
 #myCanvas1 {
   border: 1px solid black;
-  background-image: url("supermarket-interior-shelf_165488-3982.avif");
+  background-image: url("https://www.nhm.ac.uk/content/dam/nhm-www/discover/what-is-space/what-is-space-milky-way-full-width.jpg.thumb.1160.1160.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

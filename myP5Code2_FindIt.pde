@@ -1,3 +1,5 @@
+
+
 var starXPos = [];
 var starYPos = [];
 var star = "⭐️";
@@ -17,8 +19,9 @@ var rocketFound = 0;
 
 var lll = ["🌟","🛸"];
 
-let x = random(0,300);
-let y = random(0,300);
+let x = random(0,width);
+let y = random(0,height);
+
 
 
 
@@ -35,6 +38,8 @@ draw = function(){
 
 text(lll[0],x,y);
 text(lll[1],x,y);
+textSize(30);
+
 
    if(keyPressed){
     if(key == 'r'){
