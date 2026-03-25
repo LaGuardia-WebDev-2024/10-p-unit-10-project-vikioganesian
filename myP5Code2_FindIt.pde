@@ -17,11 +17,12 @@ var rocket = "🚀";
 var rocketTotal = 2;
 var rocketFound = 0;
 
-var lll = ["🌟","🛸"];
 
-let x = random(0,width);
-let y = random(0,height);
 
+var distractions = ["🌟","🛸","👾","🌌"];
+// x,y for distractions
+let x = [random(600), random(600), random(600), random(600)];
+let y = [random(400), random(400), random(400), random(400)];
 
 
 
@@ -36,9 +37,7 @@ setup = function() {
 
 draw = function(){ 
 
-text(lll[0],x,y);
-text(lll[1],x,y);
-textSize(30);
+
 
 
    if(keyPressed){
@@ -48,6 +47,13 @@ textSize(30);
    }
 
   display();
+// distracting emojis
+text(distractions[0],x[0],y[0]);
+text(distractions[1],x[1],y[1]);
+text(distractions[2],x[2],y[2]);
+text(distractions[3],x[3],y[3]);
+textSize(30);
+   
 }
 
 
@@ -109,6 +115,8 @@ var display = function(){
     textSize(50);
     text("Press 'r' to restart \nthe game", 50, 200);
 
+
+
  }
  
 
@@ -144,5 +152,7 @@ var reset = function(){
     for(var i = 0; i < rocketTotal; i++){
     rocketXPos.push(random(0,600));
     rocketYPos.push(random(0,400));
+
+
   }
 }
